@@ -1,35 +1,41 @@
-var box;
+var ball;
 
 function setup() {
   createCanvas(400,400);
-  box = createSprite(200,200,30,30);
-
+  ball = createSprite(200,200,30,30);
+  
 }
 
 function draw() 
 {
+
+
    background(30);
 
   if (keyIsDown(RIGHT_ARROW)) 
   {
-    box.position.x = box.position.x +5;
+    ball.position.x = ball.position.x +5;
+    background('YELLOW');
   }
 
     if (keyIsDown(LEFT_ARROW)) 
   {
-    box.position.x= box.position.x -5;
+    ball.position.x= ball.position.x -5;
     
+    background('BROWN');
   }
  
     if (keyIsDown(UP_ARROW)) 
   {
-    box.position.y = box.position.y - 5;
+    ball.position.y = ball.position.y - 5;
+background('OLIVE');
    
   }
 
   if (keyIsDown(DOWN_ARROW)) 
   {
-    box.position.y = box.position.y + 5;
+    ball.position.y = ball.position.y + 5;
+  background('INDIGO');
   }
 
   drawSprites();
